@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    name = "Rich Chow"
+    name = "moochie"
     age = "21"
     context = { 'a': "Rich", 'b':"Chow", 'c':"M" }
     moochie = { 'name': "S", 'last-name': "S", "Gender": "F"}
