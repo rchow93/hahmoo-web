@@ -6,4 +6,15 @@
 
     <h2>Your age is {{ age }}.</h2>
     <h2>The context is {{a}} {{b}} {{c}} </h2>
+
+    <h1>This will iterate over a dictionary</h1>
+    <table>
+        {% for key, value in moochie.items() %}
+        <tr>
+            <th> {{key}}</th>
+            <td> {{ value}} </td>
+        </tr>
+        {% endfor %}
+    </table>
+
 </div>
