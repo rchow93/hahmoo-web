@@ -1,0 +1,81 @@
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}" />
+</head>
+<body>
+<h1>Random Password Generator</h1>
+<form action = "/" method = "post">
+
+<div class="form-check">
+    <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="" name = "symbols" >Add Symbols
+    </label>
+</div>
+
+<div class="form-check">
+    <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="" name = "numbers">Add Numbers
+    </label>
+</div>
+
+<div class="form-check">
+    <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="" name = "ucase">Add Uppercase Letters
+    </label>
+</div>
+
+<div class="form-check">
+    <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value=""  name = "lcase">Add Lowercase Letters
+    </label>
+</div>
+<p></p>
+    <h4>Desired password length</h4>
+<div class="form-group col-lg-1">
+    <label for="exampleSelect1"></label>
+    <select class="form-control" id="exampleSelect1">
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>13</option>
+        <option>14</option>
+        <option>15</option>
+        <option>16</option>
+        <option>17</option>
+        <option>18</option>
+        <option>19</option>
+        <option>20</option>
+        <option>21</option>
+        <option>22</option>
+        <option>23</option>
+        <option>24</option>
+        <option>25</option>
+        <option>26</option>
+        <option>27</option>
+        <option>28</option>
+        <option>29</option>
+        <option>30</option>
+        <option>31</option>
+        <option>32</option>
+        <option>33</option>
+        <option>34</option>
+        <option>35</option>
+        <option>36</option>
+        <option>37</option>
+        <option>38</option>
+        <option>39</option>
+        <option>40</option>
+        <option>41</option>
+        <option>42</option>
+    </select>
+</div>
+    <p><input class="form-control btn-primary" type = "submit" value = "submit" /></p>
+</form>
+</body>
+</html>

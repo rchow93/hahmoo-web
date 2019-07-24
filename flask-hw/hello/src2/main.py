@@ -2,14 +2,20 @@ from flask import Flask, redirect, url_for, request, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods = ['POST', 'GET'])
 def index():
-    name = "moochie"
-    age = "21"
-    context = { 'a': "Rich", 'b':"Chow", 'c':"M" }
-    moochie = { 'name': "S", 'last-name': "S", "Gender": "F"}
-    mylist = [5,12,99,2,53]
-    return render_template("hello.html", name=name, age=age, **context, moochie=moochie, mylist=mylist)
+    if request.method == 'POST':
+        symbols = request.form['symbols']
+#        symbols = bool(symbols)
+        numbers = request.form['numbers']
+#        numbers = bool(numbers)
+#        bmi = mass / (height*height)
+#        bmi = round(bmi,2)
+        return render_template('answer.html', symbols=symbols, numbers=numbers)
+    else:
+        return render_template('index.html')
+
+'''
 
 @app.route('/answer')
 def success(height, mass, bmi):
@@ -28,7 +34,7 @@ def login():
     else:
         return render_template('ask.html')
 
-'''  
+  
     if request.method == 'POST':
         height = request.form['height']
         height = float(height)
